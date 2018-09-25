@@ -12,8 +12,8 @@ namespace WebApi
         /// </summary>
         protected void Application_Start()
         {
+            AutofacConfig.Initialize();
             SwaggerConfig.Register();
-            AutofacConfig.Initialize(GlobalConfiguration.Configuration);
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
     }
